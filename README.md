@@ -49,21 +49,21 @@ Before running the program:
 
 To compress a file and upload it to AWS S3:
 ```bash
-./huffman_tool compress <input_file> <output_file> <bucket_name>
+./file_compression_tool compress <input_file> <output_file> <bucket_name>
 ```
 ##### Example:
 ```bash
-./huffman_tool compress input.txt compressed_output.dat my-s3-bucket
+./file_compression_tool compress input.txt compressed_output.dat my-s3-bucket
 ```
 #### Decompression
 
 To download a compressed file from AWS S3 and decompress it:
 ```bash
-./huffman_tool decompress <cloud_file_name> <output_file> <bucket_name>
+./file_compression_tool decompress <cloud_file_name> <output_file> <bucket_name>
 ```
 ##### Example:
 ```bash
-./huffman_tool decompress compressed_output.dat output.txt my-s3-bucket
+./file_compression_tool decompress compressed_output.dat output.txt my-s3-bucket
 ```
 ## AWS S3 Integration
 The program uses the AWS SDK for C++ to interact with AWS S3. Ensure your AWS credentials and region are correctly configured.
